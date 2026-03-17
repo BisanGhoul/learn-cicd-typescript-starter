@@ -15,7 +15,3 @@ describe("getAPIKey function", () => {
     expect(key).toBeNull();
   });
 });
-
-test("intentional failure", () => {
-  expect(1 + 1).toBe(2); # deliberately broken
-});
