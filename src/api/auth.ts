@@ -11,7 +11,7 @@ export function getAPIKey(headers?: IncomingHttpHeaders | null): string | null {
   if (!headers) return null;
 
   // try common header keys
-  const raw = (headers['authorization'] ?? headers['Authorization']) as
+  const raw = (headers["authorization"] ?? headers["Authorization"]) as
     | string
     | string[]
     | undefined;
@@ -26,7 +26,7 @@ export function getAPIKey(headers?: IncomingHttpHeaders | null): string | null {
   if (str.length === 0) return null;
 
   // strip "Bearer " if present
-  if (str.toLowerCase().startsWith('bearer ')) {
+  if (str.toLowerCase().startsWith("bearer ")) {
     return str.slice(7);
   }
 
