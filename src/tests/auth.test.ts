@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { getAPIKey } from "../api/auth";
+import { getAPIKey } from "../api/auth.js";
 import type { IncomingHttpHeaders } from "http";
 
 describe("getAPIKey function", () => {
@@ -8,7 +8,6 @@ describe("getAPIKey function", () => {
     const key = getAPIKey(headers);
     expect(key).toBe("my-secret-key");
   });
-
   test("returns null when headers has no authorization", () => {
     const headers: IncomingHttpHeaders = {};
     const key = getAPIKey(headers);
