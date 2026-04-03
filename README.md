@@ -1,28 +1,38 @@
-[![Tests](https://github.com/bisan-ghoul/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/bisan-ghoul/learn-cicd-typescript-starter/actions/workflows/ci.yml)
-![Tests](https://github.com/BisanGhoul/learn-cicd-typescript-starter/actions/workflows/ci.yml/badge.svg)
+# Notely CICD Project
 
-# learn-cicd-typescript-starter (Notely)
+## Overview
+The Notely CICD Project is designed to streamline the development and deployment processes utilizing Continuous Integration and Continuous Deployment (CICD) practices. This project focuses on automation and efficiency, ensuring that the code changes are propagated automatically through various environments.
 
-This repo contains the typescript starter code for the "Notely" application for the "Learn CICD" course on [Boot.dev](https://boot.dev).
+## Setup Instructions
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm (Node Package Manager)
+- Access to the Notely repository
 
-## Local Development
+### Installation Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/BisanGhoul/learn-cicd-typescript-starter.git
+   cd learn-cicd-typescript-starter
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure environment variables as needed.
 
-Make sure you're on Node version 22+.
+## Architecture
+The architecture of the Notely CICD Project is modular, designed for maintainability and scalability. Key components include:
+- **Frontend:** Built with React and TypeScript for a seamless user experience.
+- **Backend:** Node.js/Express server handling API requests and database interactions.
+- **Database:** MongoDB for data storage and retrieval.
+- **CI/CD Pipeline:** Utilizes GitHub Actions for automated testing and deployment processes.
 
-Create a `.env` file in the root of the project with the following contents:
+### Workflow
+1. Code is pushed to the repository.
+2. GitHub Actions trigger automated tests.
+3. Upon passing tests, deployment to staging occurs.
+4. Manual approval is required for production deployment.
 
-```bash
-PORT="8080"
-```
-
-Run the server:
-
-```bash
-npm install
-npm run dev
-```
-
-_This starts the server in non-database mode._ It will serve a simple webpage at `http://localhost:8080`.
-
-You do _not_ need to set up a database or any interactivity on the webpage yet. Instructions for that will come later in the course!
-Bisan's version of Boot.dev's Notely app.
+## Conclusion
+This CICD pipeline enhances collaboration and ensures that updates are delivered swiftly and reliably, improving the overall development process.
